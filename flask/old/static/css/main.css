@@ -1,0 +1,96 @@
+body, html {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #688086;
+}
+
+.content {
+    margin: 0 auto;
+    width: 450px;
+}
+
+table, td, th {
+    border: 1px solid #aaa;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.button {
+  background-color: #3D6C87;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button_small {
+  background-color: #3D6C87;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.loginbutton {
+  background-color: #3D6C87;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  left: 150px;
+}
+
+.inputs {
+  background-color: #6F98AE;
+  border: solid;
+  color: black;
+  border-width: 1px;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+.form_note_edit {
+    text-align: center;
+    width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em
+    p.ridge {border-style: ridge;}
+    margin: 0 center;
+}
+
+#content {
+    width: 70%;
+
+.danger {
+  background-color: #FF0000;
+  border-left: 6px solid #f44336;
+}

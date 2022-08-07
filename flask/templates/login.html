@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Note edit</title>
+{% endblock %}
+
+{% block body %}
+<div class="form_note_edit">
+    <h1 style="text-align: center">Login</h1>
+
+    <div class="content">
+        <form action="/login" method="POST">
+            <input type="text" class="inputs" name="login" id="login" size="16">
+            <br>
+            <input type="text" class="inputs" name="password" id="password" size="16">
+            <br>
+            <input type="submit" class="button" value="Login">
+           <input type="submit" class="button" value="create-account" name="button"/>
+        </form>
+    </div>
+</div>
+{% endblock %}

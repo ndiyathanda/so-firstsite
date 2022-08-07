@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<a href="/login" class="loginbutton" >Login</a>
+logged: {{username}}
+<text class="column1">build 3 v0.09 Created by Ndiyathanda with flask. My first site B)</text>
+<div class="content">
+    <h1 style="text-align: center">ToDo</h1>
+
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                 <td>{{task}}</td>
+                 <td>{{tasks[task]}}</td>
+                 <td>
+                     <a href="/delete/{{task}}" class="button_small" >Delete</a>
+                 </td>
+             </tr>
+        {% endfor %}
+    </table>
+
+    <form action="/" method="POST">
+        <input type="text" class="inputs" name="content" id="content" size="39">
+        <input type="submit" class="button" value="Add">
+    </form>
+
+<div class="content">
+    <h1 style="text-align: center">Homework</h1>
+
+    <table>
+        <tr>
+            <th>Description</th>
+            <th>Subject</th>
+            <th>Deadline</th>
+            <th>Actions</th>
+        </tr>
+        {% for work in homework %}
+            <tr>
+                 <td>{{work}}</td>
+                 <td>{{homework[work][0]}}</td>
+                 <td>{{homework[work][1]}}</td>
+                <td>
+                    <a href="/delete_homework/{{work}}" class="button_small" >Delete</a>
+                </td>
+             </tr>
+        {% endfor %}
+    </table>
+
+    <form action="/add-homework" method="POST">
+        <input type="text" class="inputs" name="name" id="name" size="15">
+        <input type="text" class="inputs" name="subject" id="subject" size="4">
+        <input type="text" class="inputs" name="when" id="when" size="4">
+        <input type="submit" class="button" value="Add">
+    </form>
+
+<div class="content">
+    <h1 style="text-align: center">Notes</h1>
+
+    <table>
+        <tr>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        {% for note in notes %}
+            <tr>
+                 <td>{{note}}</td>
+                <td>
+                    <a href="/delete_note/{{note}}" class="button_small" >Delete</a>
+                    <a href="/update/{{note}}" class="button_small">Update</a>
+                </td>
+             </tr>
+        {% endfor %}
+    </table>
+
+    <form action="/add-note" method="POST">
+        <input class="inputs" type="text" name="name" id="name" size="39">
+        <input class="button" type="submit" value="Add">
+    </form>
+
+{% endblock %}
